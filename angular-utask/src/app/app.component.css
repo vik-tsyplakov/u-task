@@ -5,13 +5,13 @@
   align-items: center;
 }
 .container {
+  display: block;
   width: 100%;
   max-width: 800px;
   min-height: 350px;
   max-height: 500px;
   padding: 20px;
-  display: flex;
-  justify-content: center;
+  text-align: center;
   background: rgb(89, 197, 229);
   background: linear-gradient(
     47deg,
@@ -21,6 +21,10 @@
   );
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
     rgba(53, 53, 86, 0.1) 0px 8px 24px, rgba(48, 48, 82, 0.1) 0px 16px 48px;
-
   border-radius: 20px;
+}
+.title {
+  font-size: 18px;
+  color: rgb(30, 35, 42);
+  margin-top: 10px;
 }
