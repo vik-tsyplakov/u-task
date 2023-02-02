@@ -1,0 +1,26 @@
+.app {
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  align-items: center;
+}
+.container {
+  width: 100%;
+  max-width: 800px;
+  min-height: 350px;
+  max-height: 500px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  background: rgb(89, 197, 229);
+  background: linear-gradient(
+    47deg,
+    rgba(89, 197, 229, 1) 0%,
+    rgba(162, 227, 247, 1) 35%,
+    rgba(128, 213, 241, 1) 100%
+  );
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(53, 53, 86, 0.1) 0px 8px 24px, rgba(48, 48, 82, 0.1) 0px 16px 48px;
+
+  border-radius: 20px;
+}
