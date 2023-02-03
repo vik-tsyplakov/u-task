@@ -40,15 +40,18 @@ export class PasswordValidationComponent {
             Validators.required,
             Validators.minLength(8),
             Validators.maxLength(25),
-            Validators.pattern('^[0-9]+$'), // password is easy > Only digits  +
-            //Validators.pattern('^[a-zA-Z]+$'), // password is easy > Only letters +
-            //Validators.pattern('^[#?!@$%^&*-]+$'), // password is easy > Only symbols +
-            //Validators.pattern('^[A-Za-z0-9]+$'), // password is medium > Only letters and numbers +
+            //Validators.pattern('^[0-9]+$'), // password is easy > Only digits  ++
+            //Validators.pattern('^[a-zA-Z]+$'), // password is easy > Only letters ++
+            //Validators.pattern('^[#?!@$%^&*-]+$'), // password is easy > Only symbols ++
+            //Validators.pattern('^(?=.*[0-9])(?=.*[a-zA-Z])[0-9a-zA-Z]{8,}$'), // password is medium > Only letters and numbers ++
+
             //Validators.pattern('^(?=.*[A-Za-z])(?=.*[@$!%*#?&^])[A-Za-zd@$!%*#?&^]{8,}$'), // password is medium > Only letters and symbols ++
 
-            //Validators.pattern('^(D [^0-9])+$'), // password is medium >  Only numbers and symbols ??
+            //Validators.pattern('^(?=.*[0-9])(?=.*[@$!%*#?&^])[0-9@$!%*#?&^]{8,}$'), // password is medium >  Only numbers and symbols ++
 
-            //Validators.pattern('^(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$'), // password is strong >  Password must exceed minimum eight characters, at least one letter, one symbol and one number ++
+            Validators.pattern(
+              '^(?=.*?[a-zA-Z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$'
+            ), // password is strong >  Password must exceed minimum eight characters, at least one letter, one symbol and one number ++
           ],
         ],
         confirmPassword: ['', Validators.required],
